@@ -1,2 +1,2 @@
 ---
-- include: "os-{{ ansible_distribution|lower }}.yml"
+- include: "os-{{ ansible_os_family|lower }}.yml"
