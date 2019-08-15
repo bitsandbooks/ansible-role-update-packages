@@ -10,8 +10,9 @@ galaxy_info:
   platforms:
   - name: Debian
     versions:
-    - 8
-    - 9
+    - jessie
+    - stretch
+    - buster
   - name: Ubuntu
     versions:
     - xenial
