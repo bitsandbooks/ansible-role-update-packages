@@ -1,0 +1,22 @@
+---
+- name: update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: "{{ debian_apt_cache_valid_time }}"
+
+- name: update all packages
+  package: name='*' state=latest
+
+- name: check if a reboot is needed
+  stat: path=/var/run/reboot-required
+  register: rebootneeded
+
+- name: check if reboot is already scheduled
+  stat: path=/run/systemd/shutdown/scheduled
+  register: rebootscheduled
+
+- name: schedule a restart (if necessary)
+  command: "shutdown -r {{ restart_time }}"
+  when:
+    - rebootneeded.stat.exists == True
+    - rebootscheduled.stat.exists == False

@@ -1,0 +1,30 @@
+galaxy_info:
+  role_name: update-packages
+  author: Rob Dumas
+  description: Update all packages
+
+  license: BSD
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - 8
+    - 9
+  - name: Ubuntu
+    versions:
+    - 15.04
+    - 15.10
+    - 16.04
+    - 16.10
+    - 17.04
+    - 17.10
+    - 18.04
+    - 18.10
+    - 19.04
+    - 19.10
+
+  galaxy_tags: []
+
+dependencies: []
