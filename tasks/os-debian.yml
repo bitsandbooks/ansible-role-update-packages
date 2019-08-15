@@ -18,5 +18,5 @@
 - name: schedule a restart (if necessary)
   command: "shutdown -r {{ restart_time }}"
   when:
-    - rebootneeded.stat.exists == True
-    - rebootscheduled.stat.exists == False
+    - rebootneeded.stat.exists == true
+    - rebootscheduled.stat.exists == false
