@@ -1,0 +1,7 @@
+---
+- homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- homebrew_cask:
+    upgrade_all: true
