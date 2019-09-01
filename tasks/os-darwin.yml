@@ -1,7 +1,9 @@
 ---
-- homebrew:
+- name: ensure all homebrews are up to date
+  homebrew:
     update_homebrew: yes
     upgrade_all: yes
 
-- homebrew_cask:
+- name: ensure all homebrew casks are up to date (this might take a while)
+  homebrew_cask:
     upgrade_all: true
